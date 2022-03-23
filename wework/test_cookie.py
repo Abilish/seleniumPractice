@@ -32,7 +32,7 @@ class TestCookie():
             {'domain': '.work.weixin.qq.com', 'httpOnly': False, 'name': 'wwruuutx.cs_ind', 'path': '/',
              'secure': False,
              'value': ''}
-            # cookie还有很多行已删，请自行登录获取
+            # cookie还有很多行，已删
             ]
 
         # print(self.driver.get_cookies())
@@ -41,4 +41,5 @@ class TestCookie():
             if "expiry" in cookie.keys():
                 cookie.pop("expiry")
             self.driver.add_cookie(cookie)
+        self.driver.get('https://work.weixin.qq.com/wework_admin/frame')
         sleep(3)
